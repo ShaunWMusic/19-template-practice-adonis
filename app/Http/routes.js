@@ -20,3 +20,4 @@ const Post = use('App/Model/Post');
 const apiUrl = use('http://json-data.herokuapp.com/forms');
 
 Route.get('/', 'PostController.index');
+Route.post('/', 'PostController.index');
