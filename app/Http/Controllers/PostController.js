@@ -18,7 +18,18 @@ class PostController {
 
 
   * store(request, response) {
+    const { title, author, content }  = request.all();
+   // const inputs = request.all();
 
+  yield Post.create({
+    title,
+    author,
+    content,
+    slug: title,
+    post_date: new Date(),
+  });
+
+  response.redirect('/');
   }
 
   * show(request, response) {
